@@ -9,19 +9,19 @@ from random import randint
 
 def menu():
     print("__MENÚ PRINCIPAL__")
-    print("Escoja una opción:")
+    print("Seleccione una de las siguientes opciones:")
     print("1: Generar estado incial del puerto seco")
     print("2: Imprimir estado del puerto seco")
     print("3: Ubicar un contenedor")
     print("4: Incluir un nuevo contenedor")
     print("5: Retirar un contenedor")
-    print("0: Cerrar jornada laboral")
+    print("6: Cerrar jornada laboral")
     opcion = int(input())
     return opcion
 
 #En caso de seleccionar la opción 1 debemos solicitar 2 valores definidos por las variables n(Cantidad máxima de contenedores en una pila) y m (Cantidad maxima de pilas de contenedores)
 def opc1():
-    print("GENERAR ESTADO INICIAL DEL PUERTO SECO")
+    print("Generar estado inicial del puerto seco")
     n = int(input("Ingrese la cantidad máxima de contenedores en una pila"))
     m = int(input("Ingrese la cantidad máxima de pilas de contenedores"))
     
@@ -39,7 +39,7 @@ def opc1():
     
     return n,m
     
-###FUNCION PRINCIPAL###
+#####Función principal#####
 
 opcion = menu()
 if opcion == 1:
