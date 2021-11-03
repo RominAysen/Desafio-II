@@ -1,0 +1,41 @@
+ def llenarpuerto(N,M):
+
+	puerto = []
+
+ if N==M or N<M: 
+    #Dejamos la ultima fila vacia
+    #Deben permitir que dado un un contenedor de Numero/NombreEmpresa específico, el programa indique su ubicación en el puerto seco.
+		
+        for i in range(M):
+            contenedores = []
+            for j in range(N):
+            contenedores.append(input("Ingrese numero/NombreEmpresa: "))
+            contenedores.append(0) # valor 0 representa espacio vacío
+            puerto.append(contenedores)
+		
+    else: #Dejamos la ultima fila vacia ´1 elemento 
+  
+		    for i in range(M):
+            contenedores = []
+            for j in range(N):
+                if i == 0 and j == N-1:
+                    contenedores.append(0) # valor 0 representa espacio vacío
+                else:
+                    contenedores.append(input("Ingrese numero/NombreEmpresa: "))	
+            contenedores.append(0) # valor 0 representa espacio vacío
+            puerto.append(contenedores)
+    return puerto, N, M
+
+# Deben permitir que un nuevo contenedor sea incluido al puerto seco.
+def opc2(puerto, N, M):
+    print("IMPRIMIR ESTADO DEL PUERTO SECO")
+    i = N-1
+    while (i >= 0):
+        j = M-1
+        print("| ", end = " ")
+        while (j >= 0):
+            print (puerto[j][i], " | ", end=" ")
+            j = j - 1
+        print("")
+        i = i - 1
+    
